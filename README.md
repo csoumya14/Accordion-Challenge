@@ -32,9 +32,12 @@ You will also see any lint errors in the console.
 
 - The component accepts other components.
 - One can open and close the titles listed in the accordion.
+- A test is performed for searching a content in a component.
+- A test is performed for ensuring the click event handler function is called.
+- A test is performed to check the button has "aria-expanded" attribute and it is detected.
 - Aria attributes are used to make the component accessible.
 
-## Features to add if I get more time
+## Todo
 
 - Add more keyboard support features for improving accessiblity.
 - Add smooth transitions between up and down arrow images.
@@ -48,4 +51,6 @@ You will also see any lint errors in the console.
 
   1.[Styled components](https://www.npmjs.com/package/styled-components) <br>
 
-2. [TypeScript](https://www.npmjs.com/package/typescript)
+  2.[TypeScript](https://www.npmjs.com/package/typescript) <br>
+
+  3.[Jest](https://www.npmjs.com/package/jest)
