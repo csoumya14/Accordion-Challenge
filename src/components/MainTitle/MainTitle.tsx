@@ -1,14 +1,10 @@
 import React from 'react';
 import { MainHeading, HeadingContainer } from './MainTitle.css';
 
-interface Title {
-  title: string;
-}
-
-const HeadingText = (props: Title) => {
+const HeadingText = ({ title }: { title: string }) => {
   return (
     <HeadingContainer>
-      <MainHeading>{props.title}</MainHeading>
+      <MainHeading>{title}</MainHeading>
     </HeadingContainer>
   );
 };

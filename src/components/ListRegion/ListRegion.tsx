@@ -3,14 +3,14 @@ import List from '../../components/List/List';
 import { ListRegionContainer } from './ListRegion.css';
 import { ProductType } from '../../products';
 
-const ListRegion = ({ dataItem }: { dataItem: ProductType }) => {
+const ListRegion = ({ dataItem, active }: { dataItem: ProductType; active: boolean }) => {
   return (
     <ListRegionContainer
       id={dataItem.ariaControls}
       aria-labelledby={dataItem.ariaLabelledBy}
       role="region"
     >
-      {!dataItem.isHidden ? <List data={dataItem.productList} /> : ''}
+      {active ? <List data={dataItem.productList} /> : ''}
     </ListRegionContainer>
   );
 };

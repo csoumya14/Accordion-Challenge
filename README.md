@@ -12,6 +12,22 @@ Created a re-usabe and accessible accordion component
 
 ![Final Result](../master/images/result.png)
 
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm install`
+
+Downloads and install packages locally
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
 ## Features
 
 - The component accepts other components.
@@ -23,7 +39,6 @@ Created a re-usabe and accessible accordion component
 - Add more keyboard support features for improving accessiblity.
 - Add smooth transitions between up and down arrow images.
 - Add media queries to make the component responsive.
-- Add tests
 
 ## Tech Used/ Dependencies
 
@@ -34,15 +49,3 @@ Created a re-usabe and accessible accordion component
   1.[Styled components](https://www.npmjs.com/package/styled-components) <br>
 
 2. [TypeScript](https://www.npmjs.com/package/typescript)
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
