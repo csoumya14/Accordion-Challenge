@@ -10,7 +10,7 @@ Created a re-usabe and accessible accordion component
 
 ## Final Result
 
-![Final Result](../master/images/result.png)
+![Final Result](../master/images/result1.png)
 
 ## Available Scripts
 
