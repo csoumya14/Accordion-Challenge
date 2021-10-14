@@ -1,29 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AccordionItemContainer } from './AccordionItem.css';
 import ListRegion from '../ListRegion/ListRegion';
 import ProductTitle from '../ProductTitle/ProductTitle';
 import { ProductType } from '../../products';
 
-const AccordionItem = ({
-  dataItem,
-  handleClick,
-  isAriaExpanded,
-  active,
-}: {
-  dataItem: ProductType;
-  handleClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
-  isAriaExpanded: boolean;
-  active: boolean;
-}) => {
+const AccordionItem = ({ dataItem }: { dataItem: ProductType }) => {
+  const [isAriaExpanded, setAriaExpanded] = useState<boolean>(false);
+  const [selected, setSelected] = useState<string>('');
+
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    if (selected === e.currentTarget.value) {
+      setSelected('');
+    } else {
+      setSelected(e.currentTarget.value);
+    }
+    setAriaExpanded(!isAriaExpanded);
+  };
+
   return (
     <AccordionItemContainer key={dataItem.id}>
       <ProductTitle
         dataItem={dataItem}
         handleClick={handleClick}
         isAriaExpanded={isAriaExpanded}
-        active={active}
+        active={selected === dataItem.id}
       />
-      <ListRegion dataItem={dataItem} active={active} />
+      <ListRegion dataItem={dataItem} active={selected === dataItem.id} />
     </AccordionItemContainer>
   );
 };

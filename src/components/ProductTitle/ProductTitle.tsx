@@ -4,30 +4,27 @@ import upArrow from '../../assets/chevron-up.svg';
 import { Button, TitleContainer } from './ProductTitle.css';
 import { ProductType } from '../../products';
 
-const ProductTitle = ({
-  dataItem,
-  handleClick,
-  active,
-  isAriaExpanded,
-}: {
+interface ButtonProps {
   dataItem: ProductType;
   handleClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
   active: boolean;
   isAriaExpanded: boolean;
-}) => {
+}
+
+const ProductTitle = (props: ButtonProps) => {
   return (
     <TitleContainer>
       <Button
-        aria-expanded={isAriaExpanded}
-        aria-controls={dataItem.ariaControls}
+        aria-expanded={props.isAriaExpanded}
+        aria-controls={props.dataItem.ariaControls}
         className="accordion-trigger"
-        id={dataItem.ariaLabelledBy}
-        value={dataItem.id}
-        onClick={event => handleClick(event)}
+        id={props.dataItem.ariaLabelledBy}
+        value={props.dataItem.id}
+        onClick={event => props.handleClick(event)}
       >
-        {dataItem.productTitle}
+        {props.dataItem.productTitle}
         <span aria-hidden="true">
-          {!active ? <img src={downArrow} alt="" /> : <img src={upArrow} alt="" />}
+          {props.active ? <img src={upArrow} alt="" /> : <img src={downArrow} alt="" />}
         </span>
       </Button>
     </TitleContainer>

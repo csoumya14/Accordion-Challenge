@@ -5,6 +5,7 @@ export default [
     productList: ['tele-product1', 'tele-product2', 'tele-product3', 'tele-product4'],
     ariaControls: 'sect1',
     ariaLabelledBy: 'accordion1id',
+    selectedItem: false,
   },
   {
     id: '1',
@@ -12,6 +13,7 @@ export default [
     productList: ['audio-product1', 'audio-product2', 'audio-product3', 'audio-product4'],
     ariaControls: 'sect2',
     ariaLabelledBy: 'accordion2id',
+    selectedItem: false,
   },
   {
     id: '2',
@@ -19,6 +21,7 @@ export default [
     productList: ['camera-product1', 'camera-product2', 'camera-product3', 'camera-product4'],
     ariaControls: 'sect3',
     ariaLabelledBy: 'accordion3id',
+    selectedItem: false,
   },
   {
     id: '3',
@@ -26,6 +29,7 @@ export default [
     productList: ['mobile-product1', 'mobile-product2', 'mobile-product3', 'mobile-product4'],
     ariaControls: 'sect4',
     ariaLabelledBy: 'accordion4id',
+    selectedItem: false,
   },
   {
     id: '4',
@@ -33,6 +37,7 @@ export default [
     productList: ['video-product1', 'video-product2', 'video-product3', 'video-product4'],
     ariaControls: 'sect5',
     ariaLabelledBy: 'accordion5id',
+    selectedItem: false,
   },
   {
     id: '5',
@@ -40,5 +45,6 @@ export default [
     productList: ['car-product1', 'car-product2', 'car-product3', 'car-product4'],
     ariaControls: 'sect6',
     ariaLabelledBy: 'accordion6id',
+    selectedItem: false,
   },
 ];

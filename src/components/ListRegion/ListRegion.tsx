@@ -10,7 +10,7 @@ const ListRegion = ({ dataItem, active }: { dataItem: ProductType; active: boole
       aria-labelledby={dataItem.ariaLabelledBy}
       role="region"
     >
-      {active ? <List data={dataItem.productList} /> : ''}
+      {active && <List data={dataItem.productList} />}
     </ListRegionContainer>
   );
 };

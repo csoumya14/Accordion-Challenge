@@ -4,4 +4,5 @@ export interface ProductType {
   productList: string[];
   ariaControls: string;
   ariaLabelledBy: string;
+  selectedItem: boolean;
 }
