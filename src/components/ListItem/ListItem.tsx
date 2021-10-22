@@ -3,7 +3,7 @@ import React from 'react';
 
 const ListItem = ({ listItem }: { listItem: string }) => {
   return (
-    <ListItemElement>
+    <ListItemElement role="presentation">
       <Link href="#" className="listItem">
         {listItem}
       </Link>

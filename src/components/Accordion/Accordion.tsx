@@ -1,31 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import { ProductType } from '../../products';
 import AccordionItem from '../AccordionItem/AccordionItem';
-import { Button, AccordionContainer } from './Accordion.css';
+import { AccordionContainer } from './Accordion.css';
 import data from '../../data/productData';
+import KeyboardNavigation from '../../helpers/KeyboardNavigation';
 
 const Accordion = () => {
   const [productData, setProductData] = useState<ProductType[]>([]);
-  const [collapseAll, setCollapseAll] = useState<boolean>(false);
+  const [selected, setSelected] = useState<number>(-1);
+  const [focus] = KeyboardNavigation(productData.length);
 
   useEffect(() => {
     setProductData(data);
   }, []);
 
-  const handleCollapse = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    setCollapseAll(!collapseAll);
-  };
-
   return (
     <AccordionContainer>
-      <Button onClick={e => handleCollapse(e)}>Close All</Button>
       {productData.map(dataItem => (
         <AccordionItem
+          selected={selected}
+          setSelected={setSelected}
           key={dataItem.id}
           dataItem={dataItem}
-          collapseAll={collapseAll}
-          setCollapseAll={setCollapseAll}
+          focus={focus === Number(dataItem.id)}
         />
       ))}
     </AccordionContainer>

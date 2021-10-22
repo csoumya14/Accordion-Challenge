@@ -2,10 +2,14 @@ import React from 'react';
 import ListItem from '../ListItem/ListItem';
 import { ListContainer } from './List.css';
 
-const List = ({ data }: { data: Array<string> }) => {
+export interface ListProps {
+  data: Array<string>;
+}
+
+const List = (props: ListProps) => {
   return (
     <ListContainer>
-      {data.map(listItem => (
+      {props.data.map(listItem => (
         <ListItem key={listItem} listItem={listItem} />
       ))}
     </ListContainer>
